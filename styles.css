@@ -352,6 +352,26 @@ section {
   padding-top: 1rem;
 }
 
+/* Logo centré dans le footer */
+.footer-logo {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-logo-img {
+  height: 40px; /* petit et élégant */
+  width: auto;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+
 /* =====================
    RESPONSIVE DESIGN
    ===================== */
