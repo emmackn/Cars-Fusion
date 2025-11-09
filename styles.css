@@ -30,53 +30,93 @@ body {
    NAVBAR
    ===================== */
 
+/* Navbar */
 .navbar {
-  background: rgba(14, 14, 18, 0.9);
-  position: fixed;
-  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
   top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.nav-brand .logo-text {
-  color: var(--primary);
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.logo-text {
+  color: #6156e1;
+  font-size: 1.6rem;
   font-weight: 700;
-  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
 .nav-links a {
-  color: var(--light);
   text-decoration: none;
-  margin-left: 2rem;
-  transition: var(--transition);
+  color: #444;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+  color: #6156e1;
 }
 
 .cta-button {
-  background: var(--primary);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  color: white !important;
-  margin-left: 1.5rem;
+  background-color: #6156e1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
   font-weight: 600;
+  margin-left: 20px;
+  transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-  background: #4b44c0;
+  background-color: #4f48c1;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
+}
+
 
 /* =====================
    HERO SECTION
